@@ -41,14 +41,14 @@ const ToDoList = () => {
 
   return (
     <>
-        <div className='flex-col h-full w-full gap-8'>
-            <div className="flex bg-red-400 w-full h-1/6">
+        <div className='flex-col h-full w-full gap-8 '>
+            <div className="flex flex-col md:flex-row w-full mb-2">
                 <input
                 type="text"
                 value={newItem}
                 onChange={(e) => setNewItem(e.target.value)}
                 placeholder="Enter a new item"
-                className="border p-2 flex-grow mr-2 rounded"
+                className="border p-2 flex-grow md:mr-2 rounded"
                 />
                 <button
                 onClick={addItem}
@@ -58,11 +58,11 @@ const ToDoList = () => {
                 </button>
             </div>
             <div className="flex bg-blue-400 w-full h-5/6">
-            <ul className="list-disc pl-5 w-full">
+            <ul className="list-disc p-2 min-h-8 w-full">
             {items.map((items, index) => (
                 <li
                     key={index}
-                    className="flex justify-between items-center mb-2 p-2 border-2"
+                    className="flex justify-between items-center mb-2 p-2 border-2 bg-blue-600 rounded"
                 >
                     {items}
                     <button
